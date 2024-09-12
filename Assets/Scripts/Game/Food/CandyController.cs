@@ -6,11 +6,6 @@ public class CandyController : MonoBehaviour
 {
     public float speed = 3f;
     public string Candy;
-    public CandyController candy;
-    void Start()
-    {
-        candy = GetComponent<CandyController>();
-    }
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);

@@ -9,11 +9,10 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private PlayerPoints PlayerScoreData;
     public PlayerManagerCollision player;
     public CandyPointsManager CandyManager;
-    private CandyController _candyController;
+    public CandyController _candyController;
     // Start is called before the first frame update
     void Start()
     {
-        _candyController.GetComponent<CandyController>();
         PlayerScoreData.CurrentPoints = 0;
         UpdateScoreMaxScore();
         MaxScore.text = PlayerScoreData.MaxPoints.ToString();
@@ -52,7 +51,7 @@ public class ScoreManager : MonoBehaviour
     }
     void AddScore()
     {
-        if (_candyController.GetComponent<CandyController>().Candy == "Candy1")
+        if (_candyController.Candy == "Candy1")
         {
             PlayerScoreData.CurrentPoints += CandyManager.Candy1;
         }
