@@ -5,7 +5,6 @@ using UnityEngine;
 public class CandyController : MonoBehaviour
 {
     public int points;
-
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Collector")){
         }
